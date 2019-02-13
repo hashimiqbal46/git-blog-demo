@@ -1,0 +1,14 @@
+<h1>Edit Page</h1>
+
+<%= form_for @user do |u| %>
+	<%= u.label :name %><br>
+	<%= u.text_field :name %><br>
+	<br>
+	<%= u.label :email %><br>
+	<%= u.text_field :email %><br>
+	<br>
+	<%= u.submit %>
+<% end %>
+
+<%= link_to "Delete", user_path(@user),method: :delete, data: {confirm: "Are you sure!"} %>
+<%= link_to 'New users', new_user_path %>

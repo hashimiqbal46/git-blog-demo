@@ -1,0 +1,11 @@
+<%= form_for(@search) do |jhyfj| %>
+  <h1>Search form:</h1>
+  <fieldset>
+  	Text Field<%= jhyfj.text_field :text %>
+    <%= yield jhyfj %>
+  </fieldset>
+  <p>
+    <%= jhyfj.submit "Search" %>
+  </p>
+<% end %>
+

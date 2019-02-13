@@ -1,0 +1,20 @@
+ <%= form_for @post, :validate =>true do |p| %>
+ 	<% if @post.errors.any? %>
+ 		<h2>Errors:</h2>
+ 		<ul>
+ 			<% @post.errors.full_messages.each do |message| %>
+ 				<li><%= message %></li>
+ 			<% end %>
+ 		</ul>
+ 	<% end %>
+	<%= p.label :user_id %><br>	
+	<%= p.number_field :user_id %><br>
+	<br>
+	<%= p.label :title %><br>
+	<%= p.text_field :title %><br>
+	<br>
+	<%= p.label :text %><br>
+	<%= p.text_area :text %><br>
+	<br>
+	<%= p.submit %>
+<% end %>

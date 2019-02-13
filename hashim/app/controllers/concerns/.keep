@@ -1,0 +1,3 @@
+concern :us do
+	resources :users
+end
